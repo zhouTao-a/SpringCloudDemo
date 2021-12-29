@@ -1,0 +1,14 @@
+server:
+  port: 9091
+
+spring:
+  application:
+    name: service-consumer              # 应用名称
+
+#这样设置不会在eureka中看到，只能拉取其他服务的信息，其他服务不能拉取当前服务信息 registerWithEureka: false
+eureka:
+  client:
+    registerWithEureka: false           # 是否将自己注册到注册中心 默认true
+    registry-fetch-interval-seconds: 30 # 表示Rureka Client 间隔多久去服务器拉取注册信息 默认是30秒
+    serviceUrl:                         # 设置服务注册中心地址
+      defaultZone: http://root:123456@127.0.0.1:8761/eureka/,http://root:123456@127.0.0.1:8762/eureka/
