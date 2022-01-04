@@ -1,6 +1,7 @@
 package com.cyscm.service;
 
 import com.cyscm.pojo.ClassRoom;
+import com.cyscm.pojo.User;
 
 /**
  * @author zhoutao
@@ -13,4 +14,18 @@ public interface ClassRoomService {
      * @return
      */
     ClassRoom selectById(Integer id);
+
+    /**
+     * XXX
+     * @param user
+     * @return
+     */
+    ClassRoom pojo(User user);
+
+    /**
+     * XXX
+     * @param user
+     * @return
+     */
+    ClassRoom pojoGet(User user);
 }

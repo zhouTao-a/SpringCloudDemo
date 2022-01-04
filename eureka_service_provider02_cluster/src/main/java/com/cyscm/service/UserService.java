@@ -14,4 +14,11 @@ public interface UserService {
      * @return
      */
     List<User> listUser();
+
+    /**
+     *  保存用户
+     * @param user
+     * @return
+     */
+    User saveUser(User user);
 }

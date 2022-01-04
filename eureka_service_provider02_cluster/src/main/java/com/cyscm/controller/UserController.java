@@ -3,9 +3,7 @@ package com.cyscm.controller;
 import com.cyscm.pojo.User;
 import com.cyscm.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,4 +21,15 @@ public class UserController {
     public List<User> listUser(){
         return userService.listUser();
     }
+
+    @GetMapping("/saveByGet")
+    public User saveByGet(@RequestBody User user){
+        return userService.saveUser(user);
+    }
+
+    @PostMapping("/saveByPost")
+    public User saveByPost(@RequestBody User user){
+        return userService.saveUser(user);
+    }
+
 }

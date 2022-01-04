@@ -21,4 +21,10 @@ public class UserServiceImpl implements UserService {
         new User(2, "李四", 19),
         new User(3, "赵六", 21));
     }
+
+    @Override
+    public User saveUser(User user) {
+        System.out.println(user.toString());
+        return user;
+    }
 }
